@@ -1,0 +1,6 @@
+src/App/bin
+src/App/obj
+src/App/.vs
+node_modules
+*.log
+*.tmp
