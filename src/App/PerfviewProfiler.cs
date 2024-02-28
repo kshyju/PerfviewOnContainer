@@ -2,10 +2,10 @@
 {
     internal sealed class PerfviewProfiler
     {
-        private string _profilesPath = string.Empty;
+        private string? _profilesPath = string.Empty;
         private string _logFilePath = string.Empty;
         private string _traceDataFilePath = string.Empty;
-        private string _executablePath = string.Empty;
+        private readonly string _executablePath = string.Empty;
 
         private string _providers = "";
         internal PerfviewProfiler(string providers)
@@ -32,7 +32,7 @@
 
             Console.WriteLine($"Starting Perfview profiling...");
 
-            string startArgs = $"start /AcceptEula {_traceDataFilePath}";
+            var startArgs = $"start /AcceptEula {_traceDataFilePath}";
 
             using (var startProcess = new ProcessRunner(TimeSpan.FromSeconds(60)))
             {
