@@ -6,7 +6,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var waitTimeInSeconds = 60;
+        var waitTimeInSeconds = 600;
         var envWaitTime = Environment.GetEnvironmentVariable("WAIT_TIME");
         if (!string.IsNullOrEmpty(envWaitTime) && int.TryParse(envWaitTime, out var envValue))
         {
